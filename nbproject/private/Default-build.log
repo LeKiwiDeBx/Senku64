@@ -1,0 +1,79 @@
+make: pkg-config: Command not found
+gcc -Wall -Wextra -o main.o -c main.c 
+main.c: In function 'main':
+main.c:40:14: warning: unused parameter 'argc' [-Wunused-parameter]
+ int main(int argc, char **argv)
+              ^
+main.c:40:27: warning: unused parameter 'argv' [-Wunused-parameter]
+ int main(int argc, char **argv)
+                           ^
+make: pkg-config: Command not found
+gcc -Wall -Wextra -o board.o -c board.c 
+make: pkg-config: Command not found
+gcc -Wall -Wextra -o peg.o -c peg.c 
+make: pkg-config: Command not found
+gcc -Wall -Wextra -o matrix.o -c matrix.c 
+matrix.c: In function 'matrixSelectPeg':
+matrix.c:141:4: warning: enumeration value 'CENTER' not handled in switch [-Wswitch]
+    switch (direction){
+    ^
+matrix.c:141:4: warning: enumeration value 'DEFAULT' not handled in switch [-Wswitch]
+matrix.c:141:4: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
+matrix.c: In function 'matrixCanMovePeg':
+matrix.c:222:5: warning: enumeration value 'CENTER' not handled in switch [-Wswitch]
+     switch (direction){
+     ^
+matrix.c:222:5: warning: enumeration value 'DEFAULT' not handled in switch [-Wswitch]
+matrix.c:222:5: warning: enumeration value 'NONE' not handled in switch [-Wswitch]
+matrix.c: In function '__getCoordPegWhereWeGo':
+matrix.c:272:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if(tab_Peg[i].direction == where)
+                           ^
+make: pkg-config: Command not found
+gcc -Wall -Wextra -o timer.o -c timer.c 
+timer.c: In function 'timerStartClock':
+timer.c:26:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   return ( (startClock=clock()) != -1)? 1 : 0;
+                                 ^
+timer.c: In function 'timerStopClock':
+timer.c:32:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  return  ( (stopClock=clock()) != -1)? 1 : 0;
+                                ^
+make: pkg-config: Command not found
+gcc -Wall -Wextra -o score.o -c score.c 
+score.c: In function '__insertRecord':
+score.c:150:73: warning: variable 'recordLastByType' set but not used [-Wunused-but-set-variable]
+  double currentRecordByType, recordFirstByType, recordBeforeLastByType, recordLastByType  ;
+                                                                         ^
+score.c:150:49: warning: variable 'recordBeforeLastByType' set but not used [-Wunused-but-set-variable]
+  double currentRecordByType, recordFirstByType, recordBeforeLastByType, recordLastByType  ;
+                                                 ^
+score.c:150:30: warning: variable 'recordFirstByType' set but not used [-Wunused-but-set-variable]
+  double currentRecordByType, recordFirstByType, recordBeforeLastByType, recordLastByType  ;
+                              ^
+score.c:150:9: warning: variable 'currentRecordByType' set but not used [-Wunused-but-set-variable]
+  double currentRecordByType, recordFirstByType, recordBeforeLastByType, recordLastByType  ;
+         ^
+score.c: In function '__writeScore':
+score.c:191:21: warning: unused parameter 'self' [-Wunused-parameter]
+ __writeScore(pScore self){
+                     ^
+score.c: In function '__sortScoreBy':
+score.c:196:24: warning: unused parameter 'tab' [-Wunused-parameter]
+ __sortScoreBy(tabScore tab , typeSort type){
+                        ^
+score.c:196:39: warning: unused parameter 'type' [-Wunused-parameter]
+ __sortScoreBy(tabScore tab , typeSort type){
+                                       ^
+score.c: At top level:
+score.c:277:1: warning: '__compareScoreGame' defined but not used [-Wunused-function]
+ __compareScoreGame(void const *a, void const *b){
+ ^
+score.c:191:1: warning: '__writeScore' defined but not used [-Wunused-function]
+ __writeScore(pScore self){
+ ^
+score.c:196:1: warning: '__sortScoreBy' defined but not used [-Wunused-function]
+ __sortScoreBy(tabScore tab , typeSort type){
+ ^
+make: pkg-config: Command not found
+gcc -Wall -Wextra -o senku main.o board.o peg.o matrix.o timer.o score.o 

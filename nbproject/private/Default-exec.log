@@ -1,0 +1,74 @@
+called: C:\cygwin\bin\gcc.exe
+	C:\Users\Administrateur\Documents\NetBeansProjects\Senku Windows\Senku
+	C:\cygwin\bin\gcc.exe
+	-Wall
+	-Wextra
+	-o
+	main.o
+	-c
+	main.c
+
+called: C:\cygwin\bin\gcc.exe
+	C:\Users\Administrateur\Documents\NetBeansProjects\Senku Windows\Senku
+	C:\cygwin\bin\gcc.exe
+	-Wall
+	-Wextra
+	-o
+	board.o
+	-c
+	board.c
+
+called: C:\cygwin\bin\gcc.exe
+	C:\Users\Administrateur\Documents\NetBeansProjects\Senku Windows\Senku
+	C:\cygwin\bin\gcc.exe
+	-Wall
+	-Wextra
+	-o
+	peg.o
+	-c
+	peg.c
+
+called: C:\cygwin\bin\gcc.exe
+	C:\Users\Administrateur\Documents\NetBeansProjects\Senku Windows\Senku
+	C:\cygwin\bin\gcc.exe
+	-Wall
+	-Wextra
+	-o
+	matrix.o
+	-c
+	matrix.c
+
+called: C:\cygwin\bin\gcc.exe
+	C:\Users\Administrateur\Documents\NetBeansProjects\Senku Windows\Senku
+	C:\cygwin\bin\gcc.exe
+	-Wall
+	-Wextra
+	-o
+	timer.o
+	-c
+	timer.c
+
+called: C:\cygwin\bin\gcc.exe
+	C:\Users\Administrateur\Documents\NetBeansProjects\Senku Windows\Senku
+	C:\cygwin\bin\gcc.exe
+	-Wall
+	-Wextra
+	-o
+	score.o
+	-c
+	score.c
+
+called: C:\cygwin\bin\gcc.exe
+	C:\Users\Administrateur\Documents\NetBeansProjects\Senku Windows\Senku
+	C:\cygwin\bin\gcc.exe
+	-Wall
+	-Wextra
+	-o
+	senku
+	main.o
+	board.o
+	peg.o
+	matrix.o
+	timer.o
+	score.o
+
