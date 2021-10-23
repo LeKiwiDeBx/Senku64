@@ -378,7 +378,7 @@ int boardInit()
         plbValuesValue[k] = gtk_label_new(textInit);
         markup = g_markup_printf_escaped(SENKU_PANGO_MARKUP_LABEL(LABEL_COLOR_TEXT, d), valInit);
         gtk_label_set_markup(GTK_LABEL(plbValuesValue[k]), markup);
-        //g_free( markup ) ;
+        g_free( markup ) ;
         gtk_grid_attach(GTK_GRID(pGridValues), plbValues[k], 1, i++, 1, 1);
         gtk_grid_attach(GTK_GRID(pGridValues), plbValuesValue[k], 1, i++, 1, 1);
     }
@@ -726,8 +726,8 @@ __displayPlayAgain( ) {
 
 void OnDestroy(GtkWidget *pWidget, gpointer pData)
 {
-    // const char* msg = "Do you Really wish to Quit Senku ?" ;
-    pDialogBoxQuit = gtk_message_dialog_new(GTK_WINDOW(pWindowMain), GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_OK_CANCEL, "Do you Really wish to Quit Senku ?");
+    const char* msg = "Do you Really wish to Quit Senku ?" ;
+    pDialogBoxQuit = gtk_message_dialog_new(GTK_WINDOW(pWindowMain), GTK_DIALOG_MODAL, GTK_MESSAGE_QUESTION, GTK_BUTTONS_OK_CANCEL, msg);
     gtk_window_set_title(GTK_WINDOW(pDialogBoxQuit), "Confirm QUIT");
     if (pData != NULL)
     {
@@ -775,7 +775,7 @@ void OnUndo(GtkWidget *pWidget, gpointer pData)
             //            memcpy(pMementoLastUndo,pMementoUndo,sizeof(memento) ) ;
             //g_free(pMementoUndo);
         }
-        //        g_free( markup ) ;
+        g_free( markup ) ;
     }
     else
     {
@@ -818,7 +818,7 @@ void OnNewGame(GtkWidget *pWidget, gpointer pData)
     scoreResetBonusTimeScore();
     char *markup = g_markup_printf_escaped(SENKU_PANGO_MARKUP_LABEL(LABEL_COLOR_TEXT, s), currentMatrixOfBoard.name);
     gtk_label_set_markup(GTK_LABEL(plbComments), markup);
-    //g_free(markup);
+    g_free(markup);
     _g_labelSet(plbValuesValue[LABEL_PEG], GINT_TO_POINTER(0));
     _g_labelSet(plbValuesValue[LABEL_BONUS], GINT_TO_POINTER(0));
     _g_labelSet(plbValuesValue[LABEL_TIME], GINT_TO_POINTER(0));
@@ -1087,7 +1087,7 @@ void OnPlay(GtkWidget *pWidget, gpointer pData)
         _g_labelSet(plbValuesValue[LABEL_PEG], GINT_TO_POINTER(matrixCountRemainPeg()));
         char *markup = g_markup_printf_escaped(SENKU_PANGO_MARKUP_LABEL(LABEL_COLOR_TEXT, s), currentMatrixOfBoard.name);
         gtk_label_set_markup(GTK_LABEL(plbComments), markup);
-        //g_free(markup);
+        g_free(markup);
         if (handleTimeout)
         {
             g_source_remove(handleTimeout);
@@ -1180,9 +1180,7 @@ void _g_displayMatrix(Matrix matrix)
             gtk_grid_attach(GTK_GRID(pGridMatrix), pMatrix_event[k][i], i, k, 1, 1);
             gtk_grid_attach(GTK_GRID(pGridMatrix), GTK_WIDGET(imgPeg), i, k, 1, 1);
             pEventCoord->x = k;
-           //g_printf("\nDEBUG :: fonction: _g_displayMatrix [ok] addr x: %p k:%ld sizeof(k):%ld\n", pEventCoord, k, sizeof(k));
             pEventCoord->y = i;
-           //g_printf("\nDEBUG :: fonction: _g_displayMatrix [ok] addr y: %p i:%ld sizeof(char):%ld\n", pEventCoord, i, sizeof(char));
             g_signal_connect(G_OBJECT(pMatrix_event[k][i]), "button_press_event", G_CALLBACK(OnSelect), (gpointer)pEventCoord);
             pEventCoord++;
         }
@@ -1350,9 +1348,9 @@ void _g_display_box_score(pScore ps, const int rank)
     pButtonOk = gtk_button_new_with_label("Ok");
     gtk_grid_attach(GTK_GRID(pGridScore), pButtonOk, 4, 11, 1, 1);
     g_signal_connect(G_OBJECT(pButtonOk), "clicked", G_CALLBACK(OnCloseBoxScore), NULL);
-   // g_free(markup);
+    g_free(markup);
     gtk_widget_show_all(pBoxScore);
-   // g_free(pBoxScore);
+    //g_free(pBoxScore);
 }
 
 void OnCloseBoxScore(GtkWidget *pWidget, gpointer pData)

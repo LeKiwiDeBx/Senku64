@@ -129,7 +129,6 @@ matrixLoad( int choice ) {
         currentMatrixOfBoard.name = nameShape[choice] ;
         //		__displayLoadChoice(currentMatrixOfBoard.name) ;
         currentMatrixOfBoard.id = choice ;
-        
         memcpy(matrixCopy, currentMatrixOfBoard.pShape, HOR_MAX * VER_MAX * sizeof(char)) ;
         pMatrixLoad = matrixCopy ;
         //		__displayMatrix(matrixCopy) ;

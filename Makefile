@@ -1,9 +1,10 @@
 # makefile de senku // Le Kiwi
-PROG = senku
+PROG = senku.exe
 
 CC = gcc
-
-CFLAGS = -g -Wno-unused-parameter -Wno-unused-but-set-variable -Wno-unused-function -Wno-char-subscripts -O3 -Wall -Wextra -o
+# gcc
+#pour gcc
+CFLAGS =  -Wno-unused-parameter -Wno-unused-but-set-variable -Wno-unused-function -Wno-char-subscripts -O3 -Wall -Wextra -o
 
 LDFLAGS= #-mwindows
 
