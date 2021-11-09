@@ -1,16 +1,16 @@
 # makefile de senku // Le Kiwi
-PROG = senku.exe
+PROG = senku
 
 CC = gcc
 # gcc
 #pour gcc
-CFLAGS =  -Wno-unused-parameter -Wno-unused-but-set-variable -Wno-unused-function -Wno-char-subscripts -O3 -Wall -Wextra -o
+CFLAGS = -Wno-unused-parameter -Wno-unused-but-set-variable -Wno-unused-function -Wno-char-subscripts -Wno-format-security -O3 -Wall -Wextra -o
 
-LDFLAGS= #-mwindows
+LDFLAGS= # -mwindows
 
 OBJECTS = main.o board.o peg.o matrix.o timer.o score.o memento.o
 
-PKG_CONFIG = `pkg-config --cflags --libs gtk+-3.0`
+PKG_CONFIG = `pkg-config --libs --cflags gtk+-3.0`
 
 install: all
 
