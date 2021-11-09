@@ -4,7 +4,7 @@ PROG = senku
 CC = gcc
 # gcc
 #pour gcc
-CFLAGS = -Wno-unused-parameter -Wno-unused-but-set-variable -Wno-unused-function -Wno-char-subscripts -Wno-format-security -O3 -Wall -Wextra -o
+CFLAGS = -Wno-unused-parameter -Wno-unused-but-set-variable -Wno-unused-function -Wno-char-subscripts -O3 -Wall -Wextra -o
 
 LDFLAGS= # -mwindows
 
