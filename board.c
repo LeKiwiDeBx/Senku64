@@ -777,6 +777,7 @@ void OnUndo(GtkWidget *pWidget, gpointer pData)
         }
         g_free( markup ) ;
     }
+    
     else
     {
         msg = NO_ACTION_UNDO;
@@ -1254,9 +1255,11 @@ void OnSetName(GtkWidget *pWidget, dataName *pData)
     const gchar *sName = gtk_entry_get_text(GTK_ENTRY(pData->pWidgetName));
     scoreSetNamePlayer(sName, rank);
     pScore resultScore = (score *)malloc(SCORE_BEST_OF * sizeof(score));
-    if (resultScore)
+    if (resultScore){
         resultScore = (pScore)scoreGetSortScore(0); /*arg: (int) NULL */
-    _g_display_box_score(resultScore, rank);
+        _g_display_box_score(resultScore, rank);
+    }
+        else free(resultScore);
     //g_free(resultScore);
     //g_free(pWindowGetName);
     gtk_widget_destroy(pWindowGetName);
