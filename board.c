@@ -492,12 +492,15 @@ void _g_display_box_menu(gpointer pData)
 
     pRadio[0] = gtk_radio_button_new_with_label(NULL, shapeName[0]);
     gtk_box_pack_start(GTK_BOX(pBoxMenuOption), pRadio[0], FALSE, FALSE, 0);
+
     pRadio[1] = gtk_radio_button_new_with_label_from_widget(GTK_RADIO_BUTTON(pRadio[0]), shapeName[1]);
     gtk_box_pack_start(GTK_BOX(pBoxMenuOption), pRadio[1], FALSE, FALSE, 0);
+
     pRadio[2] = gtk_radio_button_new_with_label_from_widget(GTK_RADIO_BUTTON(pRadio[1]), shapeName[2]);
     gtk_box_pack_start(GTK_BOX(pBoxMenuOption), pRadio[2], FALSE, FALSE, 0);
 
     gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(pRadio[optK]), TRUE);
+    
     // boutons <Quit> et <Play> ben oui au moins :)) */
     pBoxMenuButton = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, boxMenuButtonSpacing);
     pBtnMenuQuit = gtk_button_new_with_label(labelQuit);
