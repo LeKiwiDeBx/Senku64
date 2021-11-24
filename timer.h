@@ -9,12 +9,11 @@
 #define _TIMER_H_
 
 #include <time.h>
-
 typedef struct s_fmtTime {
     double mkt_min;
     double mkt_sec;
 } fmtTime;
-
+ 
 typedef fmtTime *pfmtTime;
 
 int timerStartClock();

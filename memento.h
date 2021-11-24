@@ -9,7 +9,7 @@
 
 #include "peg.h"
 
-#define NB_UNDO 7 //nombre max de undo géré:
+#define NB_UNDO 11 //nombre max de undo géré:
 //NB_UNDO-1-1 : niveau de depilage
 //NB_UNDO-1 = NULL: sentinelle
 

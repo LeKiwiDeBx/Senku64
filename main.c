@@ -53,7 +53,7 @@ main( int argc, char *argv[] ) {
         exit( EXIT_SUCCESS ) ;
         //            g_print( "\nGood bye! Thanks for playing this game ;)\n" ) ;
     else
-        exit( EXIT_FAILURE ) ;
+        exit( EXIT_FAILURE ) ; // « Something is rotten in the state of Denmark »
     //            g_print( "\nSorry but Init game Senku FAILURE :( \n" ) ;
     return 0 ;
 }

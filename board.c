@@ -41,7 +41,7 @@
 #define SENKU_PANGO_MARKUP_LABEL(color, type) SENKU_PANGO_CONCAT_STR(color, type)
 #define SENKU_ABS(x) ((x)) ? (x) : (-x)
 
-#define TITLE_MAIN "  Senku GTK \u03B2 2.0\n\n[°} Le KiWi (c) 2016"
+#define TITLE_MAIN "Senku (GTK+3.22) 2.1.0\n\n[°} LeKiwiDeBx\n\nCopyright (C) 2016-2021 GNU GPLv3."
 #define TITLE_MENU "Shapes choice"
 #define TIMER_DELAY 1000
 #define IMG_PEG_MOVE "image/circle_gold32.png"
@@ -55,7 +55,7 @@
 #define ACTION_UNDO "[Undo] last move"
 #define BLANK ""
 #define BOX_SCORE_TITLE " Score "
-#define APPLICATION_TITLE "Senku 'GTK' \u03B2 2.0a"
+#define APPLICATION_TITLE "Senku 2.1.0"
 #define APPLICATION_SIZE_WIDTH 360
 #define APPLICATION_SIZE_HEIGHT 340
 #define APPLICATION_BORDER_WIDTH 10
@@ -63,7 +63,7 @@
 #define LABEL_BONUS_TEXT "Bonus"
 #define LABEL_PEG_TEXT "Pegs"
 #define LABEL_TIME_TEXT "Time"
-#define LABEL_LOGO "[°} Le KiWi"
+#define LABEL_LOGO "[°} LeKiwiDeBx"
 
 /*
 static void

@@ -113,7 +113,7 @@ __getCoordPegWhereWeGo( int ) ;
 int
 matrixLoad( int choice ) {
     char *nameShape[] = {"Unknown", "Shape English", "Shape German", "Shape Diamond"} ;
-    Matrix  *matrixType[] = {(Matrix *)NULL,  (Matrix *)matrixEnglish, (Matrix *) matrixGerman,  (Matrix *)matrixDiamond} ;
+    Matrix  *matrixType[] = {(Matrix *)NULL, (Matrix *) matrixEnglish, (Matrix *) matrixGerman,  (Matrix *)matrixDiamond} ;
     if (choice >= 0 && choice <= 4) {
         switch (choice) {
         case 1:case 2:case 3:
